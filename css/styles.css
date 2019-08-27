@@ -89,3 +89,16 @@ a:hover {
 #img4 {
     border-radius: 50%;
 }
+
+#img5,
+#img6,
+#img7 {
+    border: hidden;
+    box-shadow: 0 0 10px #DC7633;
+}
+
+footer {
+    text-align: center;
+    padding-top: 70px;
+    padding-bottom: 30px;
+}
