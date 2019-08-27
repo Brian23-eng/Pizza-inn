@@ -71,3 +71,9 @@ a:hover {
     font-family: cursive;
     text-shadow: 0 0 10px #CB4335;
 }
+
+.histo {
+    text-shadow: 0 0 2px #BDC3C7;
+    text-align: center;
+    padding-top: 70px;
+}
