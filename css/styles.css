@@ -112,3 +112,23 @@
                 #img10 {
                     padding-bottom: 20px;
                 }
+                
+                .picha {
+                    text-align: center;
+                }
+                
+                textarea {
+                    resize: none;
+                }
+                
+                form {
+                    text-align: center;
+                }
+                
+                button {
+                    color: whitesmoke !important;
+                }
+                
+                .jaza {
+                    display: none;
+                }
