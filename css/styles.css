@@ -82,4 +82,10 @@ a:hover {
     text-shadow: 0 0 2px #BDC3C7;
     text-align: center;
     padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+#img1,
+#img4 {
+    border-radius: 50%;
 }
