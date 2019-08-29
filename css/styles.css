@@ -32,7 +32,8 @@
                     background-size: cover;
                     background-repeat: no-repeat;
                     background-color: rgba(0, 0, 0, 0.5);
-                    padding-bottom: 320px;
+                    background-position: center center center center;
+                    padding-bottom: 300px;
                 }
                 
                 h1 {
