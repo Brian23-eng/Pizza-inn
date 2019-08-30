@@ -165,7 +165,7 @@
                     background-size: cover;
                     background-repeat: no-repeat;
                     background-color: rgba(0, 0, 0, 0.5);
-                    padding-bottom: 300px;
+                    padding-bottom: 250px;
                     padding-left: 50px;
                 }
                 
@@ -173,4 +173,16 @@
                     text-align: center;
                     padding-bottom: 50px;
                     padding-top: 50px;
+                    text-shadow: 0 0 2px #BDC3C7;
+                }
+                
+                #par1,
+                #par2,
+                #par3,
+                #par4,
+                #par5,
+                #par6 {
+                    padding-top: 25px;
+                    font-style: italic;
+                    color: #D98880;
                 }
