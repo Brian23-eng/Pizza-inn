@@ -145,3 +145,32 @@
                 .jaza {
                     display: none;
                 }
+                
+                .pass {
+                    padding-bottom: 40px;
+                }
+                
+                #piz1,
+                #piz2,
+                #piz3,
+                #piz4,
+                #piz5,
+                #piz6 {
+                    border-radius: 50%;
+                    box-shadow: 0 0 10px #DC7633;
+                }
+                
+                .clap {
+                    background-image: url("https://img.freepik.com/free-photo/chef-black-uniform-sprinkles-white-wheat-flour-table_116441-299.jpg?size=626&ext=jpg");
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-color: rgba(0, 0, 0, 0.5);
+                    padding-bottom: 300px;
+                    padding-left: 50px;
+                }
+                
+                .menu {
+                    text-align: center;
+                    padding-bottom: 50px;
+                    padding-top: 50px;
+                }
