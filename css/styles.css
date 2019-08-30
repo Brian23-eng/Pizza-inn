@@ -90,12 +90,13 @@
                     text-shadow: 0 0 10px #CB4335;
                 }
                 
+                .branch,
                 .histo,
                 .award {
                     text-shadow: 0 0 2px #BDC3C7;
                     text-align: center;
                     padding-top: 30px;
-                    padding-bottom: 20px;
+                    padding-bottom: 50px;
                 }
                 
                 #img1,
@@ -215,4 +216,7 @@
                 .para2,
                 .para3 {
                     padding-top: 50px;
+                    display: none;
+                    font-style: italic;
+                    color: #F7DC6F;
                 }
