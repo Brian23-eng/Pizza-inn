@@ -103,6 +103,10 @@
                     border-radius: 50%;
                 }
                 
+                .rest {
+                    padding-top: 30px;
+                }
+                
                 #img5,
                 #img6,
                 #img7,
@@ -185,4 +189,30 @@
                     padding-top: 25px;
                     font-style: italic;
                     color: #D98880;
+                }
+                
+                #pic1:hover,
+                #pic2:hover,
+                #pic3:hover {
+                    -ms-transform: scale(1.5);
+                    -webkit-transform: scale(1.5);
+                    transform: scale(1.5);
+                    width: 170px;
+                }
+                
+                #img1:hover,
+                #img2:hover,
+                #img3:hover,
+                #img4:hover {
+                    -ms-transform: scale(1.5);
+                    -webkit-transform: scale(1.5);
+                    transform: scale(1.5);
+                    width: 170px;
+                }
+                
+                .para,
+                .para1,
+                .para2,
+                .para3 {
+                    padding-top: 50px;
                 }
