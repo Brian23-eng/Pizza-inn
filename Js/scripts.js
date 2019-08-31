@@ -43,4 +43,6 @@ function Order(size, vegToppings, nonVegToppings, crust) {
 }
 
 var pizzaSize = ["Small", "Medium", "Large"];
-var pizzaCrust = ["Crispy", "Stuffed", "Gluten-free"]
+var pizzaCrust = ["Crispy", "Stuffed", "Gluten-free"];
+var pizzaVegToppings = ["Mushrooms", "Onions", "Capsicum"];
+var pizzaNonVegToppings = ["Chicken", "Sausage", "Bacon"];
