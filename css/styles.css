@@ -239,6 +239,25 @@
                     box-shadow: 0 0 10px #DC7633;
                 }
                 
+                #order2 {
+                    background-color: #EC7063 !important;
+                    box-shadow: 0 0 10px #DC7633;
+                }
+                
+                .order2 {
+                    text-align: center;
+                }
+                
                 select {
                     box-shadow: 0 0 10px #DC7633;
+                }
+                
+                .over {
+                    border: 1px solid black;
+                    padding: 20px 20px 20px 20px;
+                    box-shadow: 0 0 15px #DC7633;
+                }
+                
+                h3 {
+                    text-align: center;
                 }

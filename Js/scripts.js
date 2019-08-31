@@ -46,3 +46,17 @@ var pizzaSize = ["Small", "Medium", "Large"];
 var pizzaCrust = ["Crispy", "Stuffed", "Gluten-free"];
 var pizzaVegToppings = ["Mushrooms", "Onions", "Capsicum"];
 var pizzaNonVegToppings = ["Chicken", "Sausage", "Bacon"];
+
+//determining price in relation to size
+
+if (this.size === pizzaSize[0]) {
+    this.price += 500;
+
+} else if (this.size === pizzaSize[1]) {
+    this.price += 700;
+
+} else {
+    if (this.size === pizzaSize[2] {
+            this.price += 900;
+        };
+    }
