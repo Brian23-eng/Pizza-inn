@@ -27,3 +27,20 @@ $(document).ready(function() {
         $(".para3").show();
     });
 })
+
+
+//business logic
+
+var totalCost = [];
+
+function Order(size, vegToppings, nonVegToppings, crust) {
+
+    this.size = size;
+    this.veg = vegToppings;
+    this.nonVeg = nonVegToppings;
+    this.crust = crust;
+    this.price = 0;
+}
+
+var pizzaSize = ["Small", "Medium", "Large"];
+var pizzaCrust = ["Crispy", "Stuffed", "Gluten-free"]

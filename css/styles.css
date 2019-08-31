@@ -238,3 +238,7 @@
                     background-color: #EC7063 !important;
                     box-shadow: 0 0 10px #DC7633;
                 }
+                
+                select {
+                    box-shadow: 0 0 10px #DC7633;
+                }
