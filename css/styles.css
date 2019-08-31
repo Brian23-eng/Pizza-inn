@@ -233,3 +233,8 @@
                     padding-bottom: 250px;
                     padding-left: 50px;
                 }
+                
+                #order1 {
+                    background-color: #EC7063 !important;
+                    box-shadow: 0 0 10px #DC7633;
+                }
