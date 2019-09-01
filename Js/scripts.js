@@ -155,6 +155,6 @@ function validate() {
     } else {
 
         alert("We have recieved  your message dear " + name + ", " + " thank you for getting in touch with us");
-    }
+    };
 
 }

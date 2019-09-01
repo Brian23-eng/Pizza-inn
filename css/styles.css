@@ -261,3 +261,18 @@
                 h3 {
                     text-align: center;
                 }
+                
+                .pass {
+                    padding-top: 40px;
+                }
+                
+                #piz1:hover,
+                #piz2:hover,
+                #piz3:hover,
+                #piz4:hover,
+                #piz5:hover,
+                #piz6:hover {
+                    -ms-transform: scale(1.5);
+                    -webkit-transform: scale(1.5);
+                    transform: scale(1.5);
+                }
