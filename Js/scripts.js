@@ -1,165 +1,66 @@
-// var totalCosts = [];
+var totalCosts = [];
 
-// function Order(size, crust, nonVegTopping, vegTopping) {
-//     this.size = size;
-//     this.crust = crust;
-//     this.nonVegTopping = nonVegTopping;
-//     this.vegTopping = vegTopping;
-//     this.price = 0;
-
-// }
-
-
-// var pizzaSize = ["Small", "Medium", "Large"];
-// var pizzaCrust = ["Crispy", "Stuffed", "Gluten-free"];
-// var pizzanonVegTopping = ["Chicken", "Sausage", "Bacon", ];
-// var pizzavegTopping = ["Mushroom", "Onion", "Capsicum", ];
-
-// Order.prototype.cost = function() {
-//     if (this.size === pizzaSize[0]) {
-//         this.price += 500;
-//     } else if (this.size === pizzaSize[1]) {
-//         this.price += 700;
-//     } else if (this.size === pizzaSize[2]) {
-//         this.price += 900;
-//     }
-
-//     if (this.crust === pizzaCrust[0]) {
-//         this.price += 100;
-//     } else if (this.crust === pizzaCrust[1]) {
-//         this.price += 100;
-//     } else if (this.crust === pizzaCrust[2]) {
-//         this.price += 50;
-//     }
-
-//     if (this.nonVegTopping === pizzanonVegTopping[0]) {
-//         this.price += 300;
-//     } else if (this.nonVegTopping === pizzanonVegTopping[1]) {
-//         this.price += 300;
-//     } else if (this.nonVegTopping === pizzanonVegTopping[2]) {
-//         this.price += 300;
-//     }
-
-
-//     if (this.vegTopping === pizzavegTopping[0]) {
-//         this.price += 200;
-//     } else if (this.vegTopping === pizzavegTopping[1]) {
-//         this.price += 200;
-//     } else if (this.vegTopping === pizzavegTopping[2]) {
-//         this.price += 200;
-//     }
-
-//     return this.price;
-
-// }
-// Order.prototype.totalCost = function() {
-//     var orderTotal = 0
-//     for (var order = 0; order < totalCosts.length; order++) {
-//         orderTotal += totalCosts[order];
-
-//     };
-
-//     return orderTotal;
-// }
-
-
-
-var totalCharges = [];
-
-function Order(size, crust) {
-
+function order(size, crust, nonVegTopping, vegTopping) {
     this.size = size;
     this.crust = crust;
-    this.vegToppings1 = 200;
-    this.vegToppings2 = 200;
-    this.vegToppings3 = 200;
-    this.nonVegToppings1 = 300;
-    this.nonVegToppings2 = 300;
-    this.nonVegToppings3 = 300;
+    this.nonVegTopping = nonVegTopping;
+    this.vegTopping = vegTopping;
     this.price = 0;
-};
 
-Order.prototype.pizzaCost = function() {
-    if (this.size === "Small") {
+}
+
+
+var pizzaSize = ["Small", "Medium", "Large"];
+var pizzaCrust = ["Crispy", "Stuffed", "Gluten-free"];
+var pizzanonVegTopping = ["Chicken", "Sausage", "Bacon", ];
+var pizzavegTopping = ["Mushroom", "Onion", "Capsicum", ];
+
+order.prototype.cost = function() {
+    if (this.size === pizzaSize[0]) {
         this.price += 500;
-
-    } else if (this.size === "Medium") {
+    } else if (this.size === pizzaSize[1]) {
         this.price += 700;
-
-    } else if (this.size === "Large") {
+    } else if (this.size === pizzaSize[2]) {
         this.price += 900;
+    }
 
-    } else if (this.crust === "Crispy") {
+    if (this.crust === pizzaCrust[0]) {
         this.price += 100;
-
-    } else if (this.crust === "Stuffed") {
+    } else if (this.crust === pizzaCrust[1]) {
         this.price += 100;
-
-    } else if (this.crust === "Gluten free") {
+    } else if (this.crust === pizzaCrust[2]) {
         this.price += 50;
-    };
+    }
 
-    this.price = this.vegToppings1;
-    this.price = this.vegToppings2;
-    this.price = this.vegToppings3;
-    this.price = this.nonVegToppings1;
-    this.price = this.nonVegToppings2;
-    this.price = this.nonVegToppings3;
+    if (this.nonVegTopping === pizzanonVegTopping[0]) {
+        this.price += 300;
+    } else if (this.nonVegTopping === pizzanonVegTopping[1]) {
+        this.price += 300;
+    } else if (this.nonVegTopping === pizzanonVegTopping[2]) {
+        this.price += 300;
+    }
+
+
+    if (this.vegTopping === pizzavegTopping[0]) {
+        this.price += 200;
+    } else if (this.vegTopping === pizzavegTopping[1]) {
+        this.price += 200;
+    } else if (this.vegTopping === pizzavegTopping[2]) {
+        this.price += 200;
+    }
 
     return this.price;
+
 }
+order.prototype.totalCost = function() {
+    var orderTotal = 0
+    for (var order = 0; order < totalCosts.length; order++) {
+        orderTotal += totalCosts[order];
 
+    };
 
-Order.prototype.finalCost = function() {
-    totalPrice = 0;
-    for (var i = 0; i < totalCharges.length; i++) {
-
-        TotalPrice += totalCharges[i];
-
-    }
-    return TotalPrice;
+    return orderTotal;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -172,20 +73,23 @@ $(document).ready(function() {
 
         event.preventDefault();
 
-        var sizes = $("select#piz").val();
-        var crusts = $("select#crus").val();
-        var vegToppings = $("select#topveg").val();
-        var nonVegToppings = $("select#topnoveg").val();
+        var inputtedsizes = $("select#piz").val("");
+        var inputtedcrusts = $("select#crus").val("");
+        var inputtedvegToppings = $("select#topveg").val("");
+        var inputtednonVegToppings = $("select#topnoveg").val("");
 
-        var newPizzaOrder = new Order(sizes, crusts, vegToppings, nonVegToppings);
+        var newPizzaOrder = new order(inputtedsizes, inputtedcrusts, inputtedvegToppings, inputtednonVegToppings);
         newPizzaOrder.cost();
         totalCosts.push(newPizzaOrder.price);
 
-        $("p#sz").text(sizes);
-        $("p#cr").text(crusts);
-        $("p#nvgs").text(vegToppings);
-        $("p#vgs").text(nonVegToppings);
-        $("p#tc").text(newPizzaOrder.totalCost());
+
+        $("p#sz").text(inputtedsizes);
+        $("p#cr").text(inputtedcrusts);
+        $("p#vgs").text(inputtedvegToppings);
+        $("p#nvgs").text(inputtednonVegToppings);
+        $("p#tc").text(newPizzaOrder.totalCosts());
+
+
     });
 
     $("#order2").click(function() {
@@ -193,15 +97,17 @@ $(document).ready(function() {
         prompt("Please insert you location")
         prompt("Please insert your addrress")
         alert("You will be charged an extra 200 for delivery")
-        alert("Thank you for Your Purchase!Your order will be delivered to your location in a few minutes 🍕 🚚")
-
+        alert("Thank you for Your Purchase!Your order will be delivered to your location 🍕 🚚")
 
     });
+
 
     $(".picha").click(function() {
 
         $(".jaza").fadeToggle("slow");
+
     });
+
 
     $(".eve1").hover(function() {
         $(".para").slideToggle(1000);
@@ -218,9 +124,37 @@ $(document).ready(function() {
         $("#img3").slideToggle(1000);
         $(".para2").show();
     });
+
+
     $(".eve4").hover(function() {
         $(".para3").slideToggle(1000);
         $("#img4").slideToggle(1000);
         $(".para3").show();
+
     });
 })
+
+
+function validate() {
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var text = document.getElementById("text").value;
+
+
+
+    if (name === "") {
+        alert("Please write your name!");
+
+    } else if (email === "") {
+        alert("Please write your name!");
+
+    } else if (text === "") {
+
+        alert("Please write a message");
+
+    } else {
+
+        alert("We have recieved  your message dear " + name + ", " + " thank you for getting in touch with us");
+    }
+
+}
