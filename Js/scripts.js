@@ -106,8 +106,19 @@ Order.prototype.pizzaCost = function() {
     this.price = this.nonVegToppings2;
     this.price = this.nonVegToppings3;
 
+    return this.price;
 }
 
+
+Order.prototype.finalCost = function() {
+    totalPrice = 0;
+    for (var i = 0; i < totalCharges.length; i++) {
+
+        TotalPrice += totalCharges[i];
+
+    }
+    return TotalPrice;
+}
 
 
 
