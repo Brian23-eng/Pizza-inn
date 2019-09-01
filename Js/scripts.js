@@ -1,81 +1,157 @@
-//business logic
+// var totalCosts = [];
 
-var totalCosts = [];
+// function Order(size, crust, nonVegTopping, vegTopping) {
+//     this.size = size;
+//     this.crust = crust;
+//     this.nonVegTopping = nonVegTopping;
+//     this.vegTopping = vegTopping;
+//     this.price = 0;
 
-function Order(size, vegTopping, nonVegTopping, crust) {
+// }
+
+
+// var pizzaSize = ["Small", "Medium", "Large"];
+// var pizzaCrust = ["Crispy", "Stuffed", "Gluten-free"];
+// var pizzanonVegTopping = ["Chicken", "Sausage", "Bacon", ];
+// var pizzavegTopping = ["Mushroom", "Onion", "Capsicum", ];
+
+// Order.prototype.cost = function() {
+//     if (this.size === pizzaSize[0]) {
+//         this.price += 500;
+//     } else if (this.size === pizzaSize[1]) {
+//         this.price += 700;
+//     } else if (this.size === pizzaSize[2]) {
+//         this.price += 900;
+//     }
+
+//     if (this.crust === pizzaCrust[0]) {
+//         this.price += 100;
+//     } else if (this.crust === pizzaCrust[1]) {
+//         this.price += 100;
+//     } else if (this.crust === pizzaCrust[2]) {
+//         this.price += 50;
+//     }
+
+//     if (this.nonVegTopping === pizzanonVegTopping[0]) {
+//         this.price += 300;
+//     } else if (this.nonVegTopping === pizzanonVegTopping[1]) {
+//         this.price += 300;
+//     } else if (this.nonVegTopping === pizzanonVegTopping[2]) {
+//         this.price += 300;
+//     }
+
+
+//     if (this.vegTopping === pizzavegTopping[0]) {
+//         this.price += 200;
+//     } else if (this.vegTopping === pizzavegTopping[1]) {
+//         this.price += 200;
+//     } else if (this.vegTopping === pizzavegTopping[2]) {
+//         this.price += 200;
+//     }
+
+//     return this.price;
+
+// }
+// Order.prototype.totalCost = function() {
+//     var orderTotal = 0
+//     for (var order = 0; order < totalCosts.length; order++) {
+//         orderTotal += totalCosts[order];
+
+//     };
+
+//     return orderTotal;
+// }
+
+
+
+var totalCharges = [];
+
+function Order(size, crust) {
 
     this.size = size;
-    this.veg = vegTopping;
-    this.nonVeg = nonVegTopping;
     this.crust = crust;
+    this.vegToppings1 = 200;
+    this.vegToppings2 = 200;
+    this.vegToppings3 = 200;
+    this.nonVegToppings1 = 300;
+    this.nonVegToppings2 = 300;
+    this.nonVegToppings3 = 300;
     this.price = 0;
-}
+};
 
-var pizzaSize = ["Small", "Medium", "Large"];
-var pizzaCrust = ["Crispy", "Stuffed", "Gluten-free"];
-var pizzaVegTopping = ["Mushrooms", "Onions", "Capsicum"];
-var pizzaNonVegTopping = ["Chicken", "Sausage", "Bacon"];
-
-Order.prototype.cost = function() {
-
-    //determining price in relation to size
-
-    if (this.size === pizzaSize[0]) {
+Order.prototype.pizzaCost = function() {
+    if (this.size === "Small") {
         this.price += 500;
 
-    } else if (this.size === pizzaSize[1]) {
+    } else if (this.size === "Medium") {
         this.price += 700;
 
-    } else if (this.size === pizzaSize[2]) {
-
+    } else if (this.size === "Large") {
         this.price += 900;
 
-        //determining price according to the crust chosen
-
-    } else if (this.crust === pizzaCrust[0]) {
+    } else if (this.crust === "Crispy") {
         this.price += 100;
 
-    } else if (this.crust === pizzaCrust[1]) {
+    } else if (this.crust === "Stuffed") {
         this.price += 100;
 
-    } else if (this.crust === pizzaCrust[2]) {
+    } else if (this.crust === "Gluten free") {
         this.price += 50;
-
-        //determining price according to veges or non veges
-
-    } else if (this.veg === pizzaVegTopping[0]) {
-        this.price += 200;
-
-    } else if (this.veg === pizzaVegTopping[1]) {
-        this.price += 200;
-
-    } else if (this.veg === pizzaVegTopping) {
-        this.price += 200;
-
-    } else if (this.nonVeg === pizzaNonVegTopping[0]) {
-        this.price += 300;
-
-
-    } else if (this.nonVeg === pizzaNonVegTopping[1]) {
-        this.price += 300;
-
-    } else if (this.nonVeg === pizzaNonVegTopping[2]) {
-        this.price += 300;
-
-
     };
-    return this.price;
+
+    this.price = this.vegToppings1;
+    this.price = this.vegToppings2;
+    this.price = this.vegToppings3;
+    this.price = this.nonVegToppings1;
+    this.price = this.nonVegToppings2;
+    this.price = this.nonVegToppings3;
+
 }
 
 
 
-Order.prototype.totalCost = function() {
-    var orderTotal = 0;
-    for (var order = 0; order < totalCosts.length; order++) {
-        orderTotal += totalCosts[order];
-    }
-    return orderTotal;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -85,19 +161,19 @@ $(document).ready(function() {
 
         event.preventDefault();
 
-        var inputtedSize = $("select#piz").val();
-        var inputtedCrust = $("select#crus").val();
-        var inputtedVegTopping = $("select#topveg").val();
-        var inputtedNonVegTopping = $("select#topnoveg").val();
+        var sizes = $("select#piz").val();
+        var crusts = $("select#crus").val();
+        var vegToppings = $("select#topveg").val();
+        var nonVegToppings = $("select#topnoveg").val();
 
-        var newPizzaOrder = new Order(inputtedSize, inputtedCrust, inputtedVegTopping, inputtedNonVegTopping);
+        var newPizzaOrder = new Order(sizes, crusts, vegToppings, nonVegToppings);
         newPizzaOrder.cost();
         totalCosts.push(newPizzaOrder.price);
 
-        $("p#sz").val("").text(inputtedSize);
-        $("p#cr").val("").text(inputtedCrust);
-        $("p#nvgs").val("").text(inputtedNonVegTopping);
-        $("p#vgs").val("").text(inputtedVegTopping);
+        $("p#sz").text(sizes);
+        $("p#cr").text(crusts);
+        $("p#nvgs").text(vegToppings);
+        $("p#vgs").text(nonVegToppings);
         $("p#tc").text(newPizzaOrder.totalCost());
     });
 
@@ -110,41 +186,30 @@ $(document).ready(function() {
 
 
     });
+
+    $(".picha").click(function() {
+
+        $(".jaza").fadeToggle("slow");
+    });
+
+    $(".eve1").hover(function() {
+        $(".para").slideToggle(1000);
+        $("#img1").slideToggle(1000);
+        $(".para").show();
+    });
+    $(".eve2").hover(function() {
+        $(".para1").slideToggle(1000);
+        $("#img2").slideToggle(1000);
+        $(".para1").show();
+    });
+    $(".eve3").hover(function() {
+        $(".para2").slideToggle(1000);
+        $("#img3").slideToggle(1000);
+        $(".para2").show();
+    });
+    $(".eve4").hover(function() {
+        $(".para3").slideToggle(1000);
+        $("#img4").slideToggle(1000);
+        $(".para3").show();
+    });
 })
-
-
-
-
-
-
-
-
-// //user interface one
-// $(document).ready(function() {
-
-//     $(".picha").click(function() {
-
-//         $(".jaza").fadeToggle("slow");
-//     });
-
-//     $(".eve1").hover(function() {
-//         $(".para").slideToggle(1000);
-//         $("#img1").slideToggle(1000);
-//         $(".para").show();
-//     });
-//     $(".eve2").hover(function() {
-//         $(".para1").slideToggle(1000);
-//         $("#img2").slideToggle(1000);
-//         $(".para1").show();
-//     });
-//     $(".eve3").hover(function() {
-//         $(".para2").slideToggle(1000);
-//         $("#img3").slideToggle(1000);
-//         $(".para2").show();
-//     });
-//     $(".eve4").hover(function() {
-//         $(".para3").slideToggle(1000);
-//         $("#img4").slideToggle(1000);
-//         $(".para3").show();
-//     });
-// })z
