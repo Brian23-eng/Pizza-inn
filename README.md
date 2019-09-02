@@ -39,7 +39,7 @@ This is a webpage  where a customer can order any size of pizza with different c
 
 ## Live Demo
 
-* You can view the live demo on my triangle tracker 
+* You can view the live demo on my triangle tracker  https://brian23-eng.github.io/Pizza-inn/
 
 ## License information
 
