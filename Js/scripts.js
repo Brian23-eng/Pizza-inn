@@ -49,7 +49,6 @@ order.prototype.cost = function() {
     }
 
     return this.price;
-    alert(this.price)
 }
 
 
@@ -74,8 +73,9 @@ $(document).ready(function() {
         newPizzaOrder.cost();
         totalCosts.push(newPizzaOrder.price);
 
+
         $("#sz").text(sizes);
-        $("#crus").text(crusts);
+        $("#cr").text(crusts);
         $("#nvgs").text(noVegToppings);
         $("#vgs").text(vegToppings);
         $("#tc").text(newPizzaOrder.totalCost());
